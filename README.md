@@ -7,7 +7,7 @@
 
 A full-stack educational content sharing platform designed for Sierra Leone students and teachers. This platform enables the sharing, discovery, and management of educational resources to support quality education and bridge educational gaps in Sierra Leone.
 
-## 🎯 SDG Alignment
+##  SDG Alignment
 
 This project aligns with the United Nations Sustainable Development Goals:
 
@@ -15,7 +15,7 @@ This project aligns with the United Nations Sustainable Development Goals:
 - **SDG 10: Reduced Inequalities** - Empowering underserved communities with educational resources
 - **SDG 17: Partnerships for the Goals** - Collaborative platform for knowledge sharing
 
-## 🚀 Features
+##  Features
 
 ### For Students
 - Browse and search educational resources by subject, level, and file type
@@ -70,7 +70,7 @@ This project aligns with the United Nations Sustainable Development Goals:
 - **React Dropzone** - File upload
 - **Recharts** - Data visualization
 
-## 📦 Installation
+##  Installation
 
 ### Prerequisites
 - Node.js (v18 or higher)
@@ -125,7 +125,7 @@ npm run dev
 
 The frontend will run on `http://localhost:3000`
 
-## 📁 Project Structure
+##Project Structure
 
 ```
 sierra-leone-edu-platform/
@@ -249,7 +249,7 @@ sierra-leone-edu-platform/
 - `PUT /api/admin/users/:id/role` - Update user role [Admin]
 - `DELETE /api/admin/users/:id` - Delete user [Admin]
 
-## 🔐 Security Features
+##  Security Features
 
 - Password hashing with bcryptjs
 - JWT token-based authentication
@@ -262,7 +262,7 @@ sierra-leone-edu-platform/
 - Global error boundary for React
 - Admin-only endpoints
 
-## 🌐 Language Support
+##  Language Support
 
 The platform supports two languages:
 - **English** - Primary language
@@ -270,7 +270,7 @@ The platform supports two languages:
 
 Language preference is stored in localStorage and persists across sessions.
 
-## 📱 PWA Features
+##  PWA Features
 
 - Installable as a progressive web app
 - Offline support for static assets
@@ -278,7 +278,7 @@ Language preference is stored in localStorage and persists across sessions.
 - Sierra Leone green theme color (#1EB53A)
 - Responsive design for all devices
 
-## 🚀 Deployment
+##  Deployment
 
 ### Backend Deployment (Render.com)
 
@@ -312,7 +312,7 @@ Language preference is stored in localStorage and persists across sessions.
 
 See `backend/.env.example` for all required environment variables.
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -322,25 +322,25 @@ Contributions are welcome! Please follow these steps:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 👥 Contributors
+##  Contributors
 
 - **Cognition AI** - Initial development
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🔗 Live Demo
+## Live Demo
 
 *(Add live demo link when deployed)*
 
-## 📧 Contact
+##  Contact
 
 For questions or support:
 - Email: info@sl-edu.sl
 - Location: Freetown, Sierra Leone
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Sierra Leone Ministry of Education
 - All educators contributing resources
