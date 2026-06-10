@@ -1,0 +1,22 @@
+{
+  "name": "EduShare SL",
+  "short_name": "EduShare",
+  "description": "Free Educational Resources for Sierra Leone",
+  "theme_color": "#1EB53A",
+  "background_color": "#003DA5",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
