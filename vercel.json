@@ -39,6 +39,24 @@
 :
  
 "/_/backend"
+,
+            
+"builder"
+:
+ 
+"@vercel/node"
+,
+            
+"runtime"
+:
+ 
+"nodejs20.x"
+,
+            
+"entrypoint"
+:
+ 
+"server.js"
         
 }
     
