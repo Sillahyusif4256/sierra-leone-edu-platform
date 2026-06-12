@@ -29,34 +29,22 @@
  
 {
             
-"root"
+"entrypoint"
 :
  
-"backend"
+"backend/server.js"
 ,
             
 "routePrefix"
 :
  
-"/_/backend"
+"/api"
 ,
             
-"builder"
+"framework"
 :
  
-"@vercel/node"
-,
-            
-"runtime"
-:
- 
-"nodejs20.x"
-,
-            
-"entrypoint"
-:
- 
-"server.js"
+"express"
         
 }
     
