@@ -86,7 +86,27 @@ const Dashboard = () => {
 
   const onDrop = (acceptedFiles) => {
     if (acceptedFiles.length > 0) {
-      setProfilePicture(acceptedFiles[0]);
+      handleProfilePictureUpload(acceptedFiles[0]);
+    }
+  };
+
+  const handleProfilePictureUpload = async (file) => {
+    const formData = new FormData();
+    formData.append('profilePicture', file);
+
+    try {
+      const response = await api.post('/users/profile-picture', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+      toast.success('Profile picture uploaded successfully');
+      
+      // Update user in authStore
+      const { getMe } = useAuthStore.getState();
+      await getMe();
+    } catch (error) {
+      toast.error(error.response?.data?.error || 'Failed to upload profile picture');
     }
   };
 
@@ -290,8 +310,16 @@ const Dashboard = () => {
                         Profile Picture
                       </label>
                       <div className="flex items-center space-x-6">
-                        <div className="w-24 h-24 bg-sl-blue rounded-full flex items-center justify-center text-white text-3xl font-semibold">
-                          {user?.name?.charAt(0) || 'U'}
+                        <div className="w-24 h-24 bg-sl-blue rounded-full flex items-center justify-center text-white text-3xl font-semibold overflow-hidden">
+                          {user?.profilePicture ? (
+                            <img
+                              src={user.profilePicture}
+                              alt="Profile"
+                              className="w-full h-full object-cover"
+                            />
+                          ) : (
+                            <span>{user?.name?.charAt(0) || 'U'}</span>
+                          )}
                         </div>
                         <div {...getRootProps()} className="cursor-pointer">
                           <input {...getInputProps()} />

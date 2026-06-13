@@ -331,8 +331,16 @@ const Navbar = () => {
                   aria-label="User menu"
                   aria-expanded={showDropdown}
                 >
-                  <div className="w-8 h-8 bg-sl-green rounded-full flex items-center justify-center text-white font-semibold" aria-hidden="true">
-                    {user.name?.charAt(0) || 'U'}
+                  <div className="w-8 h-8 bg-sl-green rounded-full flex items-center justify-center text-white font-semibold overflow-hidden" aria-hidden="true">
+                    {user.profilePicture ? (
+                      <img
+                        src={user.profilePicture}
+                        alt="Profile"
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <span>{user.name?.charAt(0) || 'U'}</span>
+                    )}
                   </div>
                   <span className="text-sm">{user.name}</span>
                   <FiChevronDown aria-hidden="true" />
