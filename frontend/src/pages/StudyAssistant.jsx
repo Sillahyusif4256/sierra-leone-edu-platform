@@ -52,7 +52,8 @@ const StudyAssistant = () => {
       setMessages([...newMessages, { role: 'assistant', content: response.data.response }]);
     } catch (error) {
       console.error('Error sending message:', error);
-      setMessages([...newMessages, { role: 'assistant', content: 'Sorry, I encountered an error. Please try again.' }]);
+      const errorMessage = error.response?.data?.error || 'Sorry, I encountered an error. Please try again.';
+      setMessages([...newMessages, { role: 'assistant', content: errorMessage }]);
     } finally {
       setIsLoading(false);
       setTyping(false);

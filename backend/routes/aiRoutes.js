@@ -29,7 +29,8 @@ router.post('/chat', async (req, res) => {
     }
 
     if (!process.env.GOOGLE_GEMINI_API_KEY) {
-      return res.status(500).json({ error: 'Google Gemini API key is not configured' });
+      console.error('GOOGLE_GEMINI_API_KEY is not configured');
+      return res.status(500).json({ error: 'AI service is not configured. Please contact administrator.' });
     }
 
     // Build conversation context
